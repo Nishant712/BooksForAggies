@@ -1,0 +1,629 @@
+/*
+
+Ocean Theme
+
+http://www.templatemo.com/tm-484-ocean
+
+-----------------------------*/
+body {
+
+    font-size: 19px;
+    font-weight: 300;
+    background:url('login-bg.jpg') no-repeat 0 0;
+    background-size: cover;
+
+    font-family: 'Open Sans', sans-serif;
+    background-attachment: fixed;
+    background-position: center;
+}
+a { color: #81b4eb;  }
+a, button { transition: all 0.3s ease; }
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+.error{
+    font-family: 'Open Sans', sans-serif;
+    color: red;
+    text-shadow: red 0 0 1px;
+}
+.error1{
+    font-family: 'Open Sans', sans-serif;
+    color: red;
+    text-shadow: red 0 0 1px;
+}
+
+.header-background {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.pace .pace-progress {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    height: 70px;
+    -webkit-transition: width 300ms ease-in-out;
+    transition: width 300ms ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.heading {
+    text-shadow: 0 0 20px black;
+}
+.header {
+    position: fixed;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 100%;
+    -webkit-transition: height 300ms ease-in-out;
+    transition: height 300ms ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(transparent));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1), transparent);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+}
+
+.header__wrapper {
+    position: relative;
+    z-index: 3000;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header__hamburger {
+    position: relative;
+    z-index: 150;
+    width: 36px;
+    float: left;
+    margin-top: 28px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.header__hamburger-block {
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 4px;
+    -webkit-box-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px black;
+    margin-bottom: 9px;
+    -webkit-transition: background-color 100ms ease-in-out;
+    transition: background-color 100ms ease-in-out;
+}
+
+.header__hamburger-block:last-of-type {
+    margin-bottom: 0;
+}
+
+.header__hamburger:hover .header__hamburger-block {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.header__navigation {
+    position: fixed;
+    top: 0;
+    padding: 70px 20px 14px 20px;
+    min-width: 300px;
+    background-color: rgba(18, 18, 18, 0.9);
+    display: none;
+    z-index: 100;
+}
+
+.header__navigation a {
+    display: block;
+    padding: 8px 0;
+}
+
+.header__navigation-element {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    opacity: 0.8;
+    padding-left: 35px;
+    padding-right: 10px;
+    background-size: 20px 20px;
+    background-position: 5px top;
+    -webkit-transition: padding 100ms ease;
+    transition: padding 100ms ease;
+}
+/*
+.header__navigation-element--experience {
+	background-image: url("../img/title_square.svg");
+}
+
+.header__navigation-element--features {
+	background-image: url("../img/title_circle.svg");
+}
+
+.header__navigation-element--realizations {
+	background-image: url("../img/title_pentagon.svg");
+}
+
+.header__navigation-element--contact {
+	background-image: url("../img/title_triangle.svg");
+}
+*/
+.header__navigation a:hover .header__navigation-element {
+    padding-left: 40px;
+}
+
+.header__title-wrapper {
+    float: left;
+    margin-top: 25px;
+    margin-left: 20px;
+    position: relative;
+    z-index: 200;
+}
+.logo {
+    width: 400px;
+}
+.header__title-wrapper_right {
+    float: right;
+    margin-top: 25px;
+    margin-left: 20px;
+
+    position: relative;
+    z-index: 200;
+}
+.header__title-wrapper_center {
+
+    float: left;
+    margin-top: -25px;
+    margin-left: 400px;
+    position: relative;
+    z-index: 200;
+}
+.header__title-main {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 20px black;
+}
+
+.header__title-sub {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 1px;
+    text-shadow: 0 0 20px black;
+}
+
+.header__social-icons {
+    float: right;
+    margin-left: 50px;
+    margin-top: 16px;
+}
+
+.header__social-icons a {
+    float: left;
+    margin-left: 50px;
+    font-size: 31px;
+    text-shadow: 0 0 20px black;
+    color: rgba(255, 255, 255, 0.9);
+    -webkit-transition: color 100ms ease-in-out;
+    transition: color 100ms ease-in-out;
+}
+
+.header__social-icons a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+
+}
+h1{
+    font-size:40px;
+    color:#fff;
+    margin:50px 0 80px 0;
+    text-align:center;
+}
+.w3layouts{
+    width:70%;
+    margin:250px 480px;
+}
+.signin-agile,.signup-agileinfo {
+    width: 35%;
+    float: left;
+    background:#fff;
+    padding: 50px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    height: 450px;
+}
+
+.signin-agile h2,.signup-agileinfo h3{
+    font-size:25px;
+    color:#7d7d7d;
+    margin-bottom:20px;
+}
+.signup-agileinfo{
+    background: rgba(57, 64, 93, 0.76);
+}
+.signup-agileinfo h3{
+    color:#fff;
+}
+.signup-agileinfo p{
+    color:#fff;
+    font-size:14px;
+    line-height:30px;
+}
+input[type="text"],input[type="password"]{
+    width:93.5%;
+    padding: 15px;
+    border:1px solid #7d7d7d;
+    outline:none;
+    font-size:14px;
+    margin-bottom:20px;
+    border-radius:25px;
+}
+form ul {
+    float: left;
+}
+ul li {
+    list-style: none;
+    display: inline-block;
+}
+ul li input[type="checkbox"] {
+    display: none;
+}
+ul li input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 25px;
+    border: #F0F8FF;
+    color: #7d7d7d;
+    display: inline-block;
+    font-size: 14px;
+
+}
+ul li input[type="checkbox"]+label span:first-child {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    border: 1px solid #7d7d7d;
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    bottom: 4px;
+}
+ul li input[type="checkbox"]:checked+label span:first-child:before {
+    content: "";
+    /*background: url("") no-repeat;*/
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    font-size: 10px;
+    width: 10px;
+    height: 10px;
+}
+
+form a {
+    color: #7d7d7d;
+    float: right;
+    font-size: 14px;
+
+}
+input[type="submit"]{
+    background: rgba(57, 64, 93, 1);
+    padding:13px 0;
+    font-size:16px;
+    color:#fff;
+    cursor:pointer;
+    outline:none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    width:100%;
+    border:none;
+    margin-top:25px;
+    border-radius:25px;
+}
+
+input[type="submit"]:hover{
+    background:#081148;
+}
+.footer-w3l {
+    margin: 120px 0 15px 0;
+}
+.footer-w3l p{
+    font-size:14px;
+    text-align:center;
+    color:#fff;
+    line-height:27px;
+}
+.footer-w3l p a{
+    color:#fff;
+}
+.footer-w3l p a:hover{
+    text-decoration:underline;
+}
+
+/*--pop-up--*/
+a.book.popup-with-zoom-anim.button-isi.zoomIn.animated {
+    border:1px solid #fff;
+    padding: 8px 34px;
+    color:#fff;
+    display:inline-block;
+    margin-top:35px;
+    border-radius: 20px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    outline:none;
+}
+a.book.popup-with-zoom-anim.button-isi.zoomIn.animated:hover{
+    border:1px solid #0c1558;
+    color:#fff;
+    background:#0c1558;
+}
+.book-form {
+    padding: 2em;
+}
+.book-form h3 {
+    font-size: 1.8em;
+    text-align: left;
+    color: #7d7d7d;
+    margin-bottom: 1.5em;
+}
+/*-- //pop-up --*/
+
+
+/*-- Responsive --*/
+@media screen and (max-width: 1440px) {
+    .signin-agile, .signup-agileinfo {
+        padding:73px;
+    }
+    input[type="text"], input[type="password"] {
+        width: 91%;
+    }
+}
+@media screen and (max-width: 1366px) {
+    .signin-agile, .signup-agileinfo {
+        padding:70px;
+    }
+    input[type="text"], input[type="password"] {
+        width: 90.5%;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .w3layouts {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+}
+@media screen and (max-width: 1080px) {
+    .w3layouts {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .signin-agile, .signup-agileinfo {
+        padding:63px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    h1 {
+        margin: 50px 0 56px 0;
+    }
+    .signin-agile, .signup-agileinfo {
+        padding:60px;
+    }
+    input[type="text"], input[type="password"] {
+        width: 89%;
+    }
+    .footer-w3l {
+        margin: 80px 0 15px 0;
+    }
+}
+@media screen and (max-width: 991px) {
+    .w3layouts {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 966px) {
+
+}
+@media screen and (max-width: 900px) {
+    .signin-agile, .signup-agileinfo {
+        padding:55px;
+    }
+    input[type="text"], input[type="password"] {
+        width: 88%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .signin-agile, .signup-agileinfo {
+        padding:49px;
+    }
+    input[type="text"], input[type="password"] {
+        width: 87%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .w3layouts {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .signin-agile, .signup-agileinfo {
+        padding:50px;
+    }
+    ul li input[type="checkbox"]+label {
+        font-size:13px;
+    }
+    form a{
+        font-size:13px;
+    }
+}
+@media screen and (max-width: 736px) {
+    .signin-agile, .signup-agileinfo {
+        padding: 48px;
+    }
+}
+@media screen and (max-width: 667px) {
+    h1 {
+        margin: 30px 0 45px 0;
+    }
+    .w3layouts {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .signin-agile, .signup-agileinfo {
+        padding: 46px;
+    }
+    input[type="text"], input[type="password"] {
+        padding:12px;
+    }
+    input[type="submit"] {
+        padding: 12px 0;
+    }
+    .my-mfp-zoom-in.mfp-ready #small-dialog, #smallForgetPassword {
+        padding: 30px!important;
+    }
+
+    .my-mfp-zoom-in.mfp-ready #smallForgetPassword {
+        padding: 30px!important;
+    }
+}
+@media screen and (max-width: 640px) {
+    .signin-agile, .signup-agileinfo {
+        padding: 44px;
+    }
+    .signup-agileinfo p {
+        font-size: 13.5px;
+        line-height: 27px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .w3layouts {
+        width: 85%;
+        margin: 0 auto;
+    }
+    .signin-agile, .signup-agileinfo {
+        width:82%;
+    }
+    input[type="text"], input[type="password"] {
+        width:93%;
+    }
+}
+@media screen and (max-width: 568px) {
+    h1 {
+        font-size: 35px;
+        margin: 35px 0 50px 0;
+    }
+    .footer-w3l {
+        margin: 40px 0 15px 0;
+    }
+}
+@media screen and (max-width: 480px) {
+    .signin-agile, .signup-agileinfo {
+        width: 77%;
+    }
+    input[type="text"], input[type="password"] {
+        width: 92%;
+    }
+    .footer-w3l p {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 414px) {
+    h1 {
+        font-size: 28px;
+        margin: 35px 0 40px 0;
+    }
+    .signin-agile, .signup-agileinfo {
+        width: 74%;
+    }
+    input[type="text"], input[type="password"] {
+        width: 89%;
+    }
+    form a {
+        margin-top: 3px;
+    }
+    .signup-agileinfo {
+        height:240px;
+    }
+}
+@media screen and (max-width: 384px) {
+    h1 {
+        font-size: 30px;
+        margin: 35px 0 40px 0;
+    }
+    .signin-agile, .signup-agileinfo {
+        width: 77%;
+        padding:35px;
+    }
+    a.book.popup-with-zoom-anim.button-isi.zoomIn.animated {
+        padding: 5px 25px;
+        font-size:13px;
+        margin-top:25px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .signin-agile, .signup-agileinfo {
+        width: 80%;
+        padding:30px;
+    }
+    .book-form h3 {
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 27px;
+        margin: 35px 0 30px 0;
+    }
+    .signin-agile, .signup-agileinfo {
+        width: 84%;
+        padding:20px;
+    }
+    .signin-agile h2, .signup-agileinfo h3 {
+        font-size: 20px;
+    }
+    input[type="text"], input[type="password"] {
+        padding: 10px;
+    }
+    input[type="submit"]{
+        padding:10px 0;
+    }
+    ul li input[type="checkbox"]+label span:first-child {
+        width: 10px;
+        height: 10px;
+        top:3px;
+    }
+    ul li input[type="checkbox"]+label {
+        font-size: 12px;
+        padding-left:20px;
+    }
+    form a{
+        font-size:12px;
+        margin-top:4px;
+    }
+    a.book.popup-with-zoom-anim.button-isi.zoomIn.animated {
+        margin-top:30px;
+    }
+    .signup-agileinfo p {
+        font-size: 12.5px;
+    }
+
+}

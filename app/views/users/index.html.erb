@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Signup/Login : Books for Aggies</title>
+  <!--
+  Ocean Theme
+  http://www.templatemo.com/tm-484-ocean
+  -->
+
+  <!-- load stylesheets -->
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"><!-- Google web font "Open Sans", https://www.google.com/fonts/specimen/Open+Sans -->
+  <link rel="stylesheet" href="/font-awesome.min.css"> <!-- Font Awesome, https://fortawesome.github.io/Font-Awesome/ -->
+  <link rel="stylesheet" href="/bootstrap.min.css">                       <!-- Bootstrap style, http://v4-alpha.getbootstrap.com/ -->
+  <link rel="stylesheet" href="/login.temp.css">                    <!-- Templatemo style -->
+  <link href="/login1.temp.css" rel="stylesheet" type="text/css" media="all" />
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+  <script src="/login.jquery.min.js"></script>
+  <script src="/login.jquery.magnific-popup.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/login.modernizr.custom.53451.js"></script>
+  <script>
+      $(document).ready(function() {
+          $('.popup-with-zoom-anim').magnificPopup({
+              type: 'inline',
+              fixedContentPos: false,
+              fixedBgPos: true,
+              overflowY: 'auto',
+              closeBtnInside: true,
+              preloader: false,
+              midClick: true,
+              removalDelay: 300,
+              mainClass: 'my-mfp-zoom-in'
+          });
+
+      });
+
+
+     
+      function validate() {
+          var password1 = $("#password").val();
+          var password2 = $("#conform_password").val();
+          if(password1 !== password2){
+              $("#password").css('border','2px solid #E34234');
+
+              $("#conform_password").css('border','2px solid red');
+              $("#submit").attr("disabled", "disabled");
+
+          }
+          else{
+              $("#password").css('border','1px solid #7d7d7d');
+
+              $("#conform_password").css('border','1px solid #7d7d7d');
+              $("#submit").removeAttr("disabled");
+          }
+
+
+      }
+
+
+  </script>
+</head>
+
+<body>
+<header class="header">
+  <div class="header__wrapper">
+
+    <a href="/" class="header__title-wrapper_center ">
+      <img class="logo" src="/logo.svg">
+      <div class="header__title-sub"></div>
+    </a>
+
+
+
+  </div>
+</header>
+
+<div class="w3layouts">
+
+  <div class="signin-agile">
+
+    <h2>Sign In</h2>
+    <form action="/users/signin" method="get">
+      <input type="text" name="Email" class="name" placeholder="Email" required="">
+      <input type="password" name="Password" class="password" placeholder="Password" required="">
+
+
+            <div class="error" style="font-size: 20px; text-align: center; height: 40px; float: none; text-decoration: blink; "><%= flash[:signinError] %></div>
+
+
+      <a href="#small-dialog2" class="popup-with-zoom-anim" data-wow-delay=".5s">Forgot Password?</a><br>
+      <div class="clear"></div>
+
+      <input type="submit" value="Login">
+      <%= token_tag nil %>
+    </form>
+  </div>
+
+  <div class="signup-agileinfo">
+    <h3>Sign Up</h3>
+
+    <p style="height: 156px">Start experiencing Books for Aggies. Provide basic details and you are good to go.</p>
+
+      <div class="error1" style="font-size: 20px; text-align: center; height: 30px; float: none; text-decoration: blink ;"><%= flash[:signupError] %></div>
+
+    <div class="more">
+      <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog">Sign Up</a>
+      <br>
+
+    </div>
+  </div>
+
+  <div class="clear"></div>
+
+</div>
+
+<!---728x90--->
+<div class="pop-up">
+  <div id="small-dialog2" class="mfp-hide book-form">
+    <h3>Forget Password </h3>
+
+    <form action="/users/forget" method="post">
+      <input type="text" name="Email" class="email" placeholder="Email" required=""/>
+      <input type="submit" id="submit" value="Submit" >
+      <%= token_tag nil %>
+    </form>
+  </div>
+</div>
+<!---728x90--->
+<div class="pop-up">
+  <div id="small-dialog" class="mfp-hide book-form">
+    <h3>Sign Up Form </h3>
+
+    <form action="/users/signup" method="get">
+      <input type="text" name="Username" placeholder="Username" required=""/>
+      <input type="text" name="Name" placeholder="Preferred Name" required=""/>
+      <input type="text" name="Email" class="email" placeholder="Email" required=""/>
+      <input type="password" name="Password" id="password" class="password" onkeyup="validate()"  placeholder="Password" required=""/>
+      <input type="password" name="conform_Password" id="conform_password" onkeyup="validate()" class="conform_password"  placeholder="Confirm Password" required=""/>
+
+      <span id='message'></span>
+      <input type="submit" id="submit" value="Sign Up" >
+      <%= token_tag nil %>
+    </form>
+  </div>
+</div>
+
+
+
+</body>
+</html>
