@@ -6,17 +6,17 @@ This website allows the students to rent a book for semester long period or for 
 
 ### Tools and Gems
 The following packages and tools were used in the project:
-Ruby 2.2.3
-Rails 5.1.4
-Postgres 0.18
-Puma 3.7
-Saas-rails 5.0
-uglifier 1.3.0
-coffee-rails 4.2
-turbolinks 5
-jbuilder 2.5
-haml-rails
-shoulda
+Ruby 2.2.3 <br />
+Rails 5.1.4 <br />
+Postgres 0.18 <br />
+Puma 3.7 <br />
+Saas-rails 5.0 <br />
+uglifier 1.3.0 <br />
+coffee-rails 4.2 <br />
+turbolinks 5 <br />
+jbuilder 2.5 <br />
+haml-rails <br />
+shoulda <br />
 hirb
 capybara 2.13
 selenium-webdriver
